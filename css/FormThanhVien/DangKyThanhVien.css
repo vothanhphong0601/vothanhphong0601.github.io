@@ -1,0 +1,18 @@
+#form1 table {
+  border: 5px groove #993366;
+  background-color: #ffdddd;
+  color: #003399;
+  margin: 0px auto;
+}
+
+#form1 table td {
+  border: 1px solid #cc9999;
+}
+.mytextbox {
+  color: #99ff33;
+  background-color: #006699;
+  border: 1px solid #996633;
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: all 0.3 ease;
+}
