@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>Nhập số tiền gốc</label>
+    <input type="number" id="tienGoc" />
+    <br />
+    <label>Nhập lãi suất</label>
+    <input type="number" id="laiSuat" />
+    <br />
+    <label>Nhập số năm gửi vay</label>
+    <input type="number" id="namVay" />
+    <br />
+    <button onclick="tinhLaiSuat()">Tính tiền</button>
+    <div id="ketQua"></div>
+
+    <script>
+      function tinhLaiSuat() {
+        let A = parseFloat(document.getElementById("tienGoc").value);
+        let r = parseFloat(document.getElementById("laiSuat").value);
+        let n = parseFloat(document.getElementById("namVay").value);
+
+        let laiMotNam = A * (r / 100);
+        let tongTienVay = A + n * laiMotNam;
+
+        alert(tongTienVay);
+      }
+    </script>
+  </body>
+</html>

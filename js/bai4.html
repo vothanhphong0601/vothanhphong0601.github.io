@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 4: Tra cứu giá hoa quả</title>
+  </head>
+  <body>
+    <h1><b>Giá hoa quả</b></h1>
+    <br />
+    <input type="text" id="ten_hoa_qua" placeholder="Nhập tên sản phẩm" />
+    <button onclick="xemGia()">Xem giá</button>
+    <div id="ketQua"></div>
+    <script>
+      function xemGia() {
+        let tenHoaQua = document.getElementById("ten_hoa_qua").value.trim();
+        let thongBao = " ";
+        switch (tenHoaQua.toLowerCase()) {
+          case "ổi": {
+            thongBao = "20000 VNĐ/kg";
+            break;
+          }
+          case "dưa hấu": {
+            thongBao = "20000 VNĐ/kg";
+            break;
+          }
+          case "táo": {
+            thongBao = "30000 VNĐ/kg";
+            break;
+          }
+          case "cam": {
+            thongBao = "40000 VNĐ/kg";
+            break;
+          }
+          case "chôm chôm": {
+            thonBao = "40000 VNĐ/kg";
+            break;
+          }
+          case "măng cụt": {
+            thongBao = "50000 VNĐ/kg";
+            break;
+          }
+          default: {
+            thongBao = "Tìm không thấy";
+            break;
+          }
+        }
+        document.getElementById("ketQua").innerText = thongBao;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 5: Tính số ngày trong tháng</title>
+  </head>
+  <body>
+    <input type="number" id="soNgay" placeholder="Nhập vào tháng" />
+    <button onclick="tinhNgay()">Tính số ngày</button>
+    <div id="hienThi"></div>
+    <script>
+      function tinhNgay() {
+        let thang = parseInt(document.getElementById("soNgay").value.trim());
+        let thongBao = " ";
+
+        switch (thang) {
+          case 1:
+          case 3:
+          case 5:
+          case 7:
+          case 8:
+          case 10:
+          case 12:
+            thongBao = "Tháng " + thang + " có 31 ngày";
+            break;
+          case 4:
+          case 6:
+          case 9:
+          case 11:
+            thongBao = "Tháng " + thang + " có 30 ngày";
+            break;
+          case 2:
+            thongBao = "Tháng 2 có 28 hoặc 29 ngày";
+            break;
+          default:
+            thongBao = "Tháng không hợp lệ";
+        }
+        document.getElementById("hienThi").innerText = thongBao;
+      }
+    </script>
+  </body>
+</html>
